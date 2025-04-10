@@ -34,9 +34,13 @@ android {
 dependencies {
 
     implementation(libs.appcompat)
+    implementation("com.squareup.picasso:picasso:2.8")
     implementation(libs.material)
     implementation(libs.activity)
+    implementation ("com.google.android.material:material:1.6.1")
     implementation(libs.constraintlayout)
+    implementation(libs.appcompat)
+    implementation(libs.appcompat)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

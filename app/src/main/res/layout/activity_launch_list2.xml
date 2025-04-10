@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nasa_blue"
+    tools:context=".LaunchListActivity2">
+
+    <!-- TOP Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/nasa_red"
+        android:paddingVertical="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/NASAtitle"
+            android:textColor="@android:color/white"
+            android:textSize="25sp" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <!-- Choose option -->
+    <TextView
+        android:id="@+id/optionsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose an option:"
+        android:textColor="@color/white"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+
+    <!-- ListView -->
+    <ListView
+        android:id="@+id/optionsListView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:divider="@color/nasa_red"
+        android:dividerHeight="1dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/optionsLabel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+    <!-- Bottom Bar -->
+    <LinearLayout
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/nasa_red"
+        android:padding="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center">
+        <EditText
+            android:id="@+id/editText"
+            android:layout_height="wrap_content"
+            android:hint="Say Hello (This will save!)"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"  android:layout_width="wrap_content"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
